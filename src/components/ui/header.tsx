@@ -27,7 +27,7 @@ const Header = () => {
                     <SheetHeader className="text-left text-lg font-semibold"> */}
                         Menu                        
                     {/* </SheetHeader> */}
-                    <div className="mt-2 flex flex-col gap-3">
+                    {/* <div className="mt-2 flex flex-col gap-3">
                         <Button variant="outline" className="w-full justify-start gap-2">
                             <LogInIcon className="" size={16}/>
                             Fazer Login  
@@ -44,7 +44,7 @@ const Header = () => {
                             <ListOrderedIcon className=""/>
                             Catálogo 
                         </Button>
-                    </div>
+                    </div> */}
                     
                 {/* </SheetContent> */}
             {/* </Sheet> */}
