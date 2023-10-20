@@ -1,5 +1,5 @@
 // import { MenuIcon, Sheet, ShoppingCartIcon } from "lucide-react";
-import { HomeIcon, ListOrderedIcon, LogInIcon, MenuIcon,  PercentCircleIcon,  PercentSquareIcon,  ShoppingCartIcon } from "lucide-react";
+import { HomeIcon, ListOrderedIcon, LogInIcon, MenuIcon,   PercentSquareIcon,  ShoppingCartIcon } from "lucide-react";
 import { Button } from "./button";
 import { Card } from "./card"
 
