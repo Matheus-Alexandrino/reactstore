@@ -6,7 +6,7 @@ import Header from '@/components/ui/header'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ReactStore(v-0.0.1)',
+  title: 'ReactStore(v-0)',
   description: 'Desenvolvido por Matheus Alexandrino',
 }
 
