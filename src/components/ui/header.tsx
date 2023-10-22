@@ -10,7 +10,7 @@ import { signIn } from "next-auth/react";
 
 const Header = () => {
     const handleLoginClick = async () => {
-        await signIn
+        await signIn()
         
     }
     return (
