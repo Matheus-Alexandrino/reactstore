@@ -34,20 +34,7 @@ const Header = () => {
                     <SheetHeader className="text-left text-lg font-semibold">
                         Menu                        
                     </SheetHeader>
-                    {status === 'authenticated' && data?.user && (
-                        <div className="flex items center gap-2">
-                            <Avatar>
-                            <AvatarFallback>
-                               data.user.image && AvatarIma
-                            </AvatarFallback>
-
-                            <AvatarImage src={data.user.image}>
-
-                            </AvatarImage>
-                            </Avatar>
-                            <p>{data.user.name}</p>
-                        </div>
-                    )}
+                   
                     <div className="mt-2 flex flex-col gap-3">
                         {status === "unauthenticated" && (
                         <Button onClick={handleLoginClick} variant="outline" className="w-full justify-start gap-2">
