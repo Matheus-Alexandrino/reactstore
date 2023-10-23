@@ -1,12 +1,13 @@
 
 "use client";
 
-import { HomeIcon, ListOrderedIcon, LogInIcon, LogOutIcon, MenuIcon,   PercentSquareIcon,  ShoppingCartIcon } from "lucide-react";
+import { HomeIcon, ListOrderedIcon, LogInIcon, LogOutIcon, MenuIcon,   PercentSquareIcon,  SeparatorHorizontalIcon,  ShoppingCartIcon } from "lucide-react";
 import { Button } from "./button";
 import { Card } from "./card"
 import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger,} from "@/components/ui/sheet"
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import { Separator } from "@radix-ui/react-separator";
 
 
 const Header = () => {
@@ -35,19 +36,26 @@ const Header = () => {
                         Menu                        
                     </SheetHeader>
                     {status === 'authenticated' && data?.user && (
-                        <div className="my-4 flex items center gap-2">
-                            <Avatar>
-                                <AvatarFallback>
-                                {data.user.name?.[0].toUpperCase()}
-                                </AvatarFallback>
+                    <div className="flex flex-col ">                
+                        <div className="flex items-center gap-2 py-4 ">
+                        <Avatar>
+                            <AvatarFallback>
+                            {data.user.name?.[0].toUpperCase()}
+                            </AvatarFallback>
 
-                                {data.user.image && 
-                                <AvatarImage src={data.user.image}>
-                                </AvatarImage>}
-                            {/* <Separator></Separator> */}
-                            </Avatar>
-                            <p className="font-medium">{data.user.name}</p>
+                            {data.user.image && 
+                            <AvatarImage className="py-4" src={data.user.image}>
+                            </AvatarImage>}
+                        {/* <Separator></Separator> */}
+                        </Avatar>
+                        <div className="flex flex-col">   
+                            {/* <p className=" opacity-75">Olá, </p> */}
+                            <p className="font-medium ">Olá, {data.user.name}</p>
+                            <p className="text-sm opacity-75">Te desejamos boas Compras!</p>
                         </div>
+                        </div>
+                            <Separator/>
+                    </div>
                     )}
                     <div className="mt-2 flex flex-col gap-3">
                         {status === "unauthenticated" && (
