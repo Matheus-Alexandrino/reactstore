@@ -41,9 +41,7 @@ const Header = () => {
                                data.user.image && AvatarIma
                             </AvatarFallback>
 
-                            <AvatarImage src={data.user.image}>
-
-                            </AvatarImage>
+                       
                             </Avatar>
                             <p>{data.user.name}</p>
                         </div>
